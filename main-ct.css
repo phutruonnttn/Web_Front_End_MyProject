@@ -1,0 +1,79 @@
+section.page-container {
+	display: inline-block;
+	margin-top: 27px;
+	margin-right: 5px;
+}
+.section-gl-container {
+	text-align: center;
+}
+.section-gl-container h4 {
+	font-size: 50px;
+	font-weight: 300;
+	color: #3c3c3c;
+	margin-bottom: 30px; 
+}
+
+.button-gl-container {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 400;
+	letter-spacing: 1px;
+	height: 45px;
+	width: 160px;
+	-webkit-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000; 
+	background: #fff;
+	border: none;
+}
+.button-gl-container:focus {
+	outline: none;
+}
+.button-gl-container .flipper
+{
+	transition: all .5s ease-in-out;
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative; 
+}
+.button-gl-container .button-gl {
+	height: 45px;
+	width: 160px;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	position: absolute;
+	top: -31px;
+	left: 0;
+	line-height: 45px;
+	flex-direction: column;
+	justify-content: center;
+	-webkit-box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
+	box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64); 
+	font-family: "Merriweather Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-size: 14px;
+	font-weight: 600;
+
+}
+.button-gl-container .button-gl.front {
+	z-index: 10;
+	color: #fff;	
+}
+.button-gl-container .button-gl.back {
+	color: white;
+	text-transform: uppercase;
+}	
+.button-gl-container .button-gl.back i{
+	font-size: 17px; 
+	margin-left: 2px;
+}	
+.button-gl-flip-oblique .front {
+	background: linear-gradient(to right, #3fcaff 0%, #a4ffb0 89%);
+}
+.button-gl-flip-oblique .back {
+	transform: rotateY(-180deg);
+	background: linear-gradient(to right, #3fcaff 0%, #a4ffb0 89%);
+}
+.button-gl-flip-oblique:hover .flipper-flip-oblique {
+	transform: rotate3d(1, 10, 0, 180deg); 
+}
